@@ -1,0 +1,38 @@
+.weight-control {
+  background-color: $white;
+}
+
+.weight-control__wrapper {
+  @include wrapper(20px);
+}
+
+.weight-control__slimming {
+  background-color: $basic-grey;
+}
+
+.weight-control__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.weight-control__text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special-dark-grey;
+}
+
+.weight-control__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+}

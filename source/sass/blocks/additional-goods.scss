@@ -1,0 +1,40 @@
+.additional-goods {
+  background-color: $white;
+}
+
+.additional-goods__wrapper {
+  @include wrapper(20px);
+}
+
+.additional-goods__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black;
+}
+
+.additional-goods__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $special-dark-grey-2;
+  text-transform: uppercase;
+}
+
+.additional-goods__parameter {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special-dark-grey;
+}
+
+.additional-goods__value {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special-dark-grey;
+}

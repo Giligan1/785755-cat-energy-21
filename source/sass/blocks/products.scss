@@ -1,0 +1,20 @@
+.products {
+  background-color: $white;
+}
+
+.products__wrapper {
+  @include wrapper(20px);
+}
+
+.products__link-description {
+  text-decoration: none;
+}
+
+.products__description {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special-dark-grey-2;
+  text-transform: uppercase;
+}

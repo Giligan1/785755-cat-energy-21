@@ -1,0 +1,23 @@
+.instruction {
+  background-color: $white;
+}
+
+.instruction__wrapper {
+  @include wrapper(20px);
+}
+
+.instruction__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $black;
+}
+
+.instruction__item {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special-dark-grey;
+}

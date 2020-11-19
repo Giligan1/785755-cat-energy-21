@@ -1,0 +1,29 @@
+.more {
+  background-color: $white;
+}
+
+.more__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special-black;
+  text-transform: uppercase;
+}
+
+.more__excerpt {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $special-dark-grey;
+}
+
+.more__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special-dark-grey;
+  text-transform: uppercase;
+}

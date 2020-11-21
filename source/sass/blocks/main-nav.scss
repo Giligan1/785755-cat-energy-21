@@ -7,6 +7,9 @@
 }
 
 .main-nav__list {
+  list-style: none;
+  padding: 0;
+
   @media (min-width: $tablet) {
     width: 440px;
     display: flex;

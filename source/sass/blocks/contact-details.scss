@@ -1,9 +1,22 @@
+.contact-details {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .contact-details__heading {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: $black;
+}
+
+.contact-details__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .contact-details__label {
@@ -13,6 +26,7 @@
   line-height: 18px;
   color: $special-dark-grey;
   text-transform: uppercase;
+  display: block;
 }
 
 .contact-details__input {

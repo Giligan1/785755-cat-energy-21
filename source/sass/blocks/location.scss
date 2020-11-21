@@ -7,6 +7,7 @@
 
   @media (min-width: $tablet) {
     @include wrapper(30px);
+    margin-left: 40px;
   }
 
   @media (min-width: $desktop) {

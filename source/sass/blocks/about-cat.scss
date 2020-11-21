@@ -1,3 +1,9 @@
+.about-cat {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .about-cat__label {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -5,6 +11,7 @@
   line-height: 18px;
   color: $special-dark-grey;
   text-transform: uppercase;
+  display: block;
 }
 
 .about-cat__input {

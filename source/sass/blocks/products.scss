@@ -4,7 +4,44 @@
 
 .products__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(70px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
 }
+
+.products__list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.products__item {
+  @media (min-width: $tablet) {
+    width: 45%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 20%;
+    margin-right: 80px;
+  }
+
+  &:nth-child(4n) {
+    @media (min-width: $desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
 
 .products__link-description {
   text-decoration: none;

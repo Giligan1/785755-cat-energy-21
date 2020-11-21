@@ -4,6 +4,14 @@
 
 .instruction__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
 }
 
 .instruction__heading {
@@ -12,6 +20,20 @@
   font-size: 36px;
   line-height: 40px;
   color: $black;
+}
+
+.instruction__list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .instruction__item {

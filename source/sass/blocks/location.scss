@@ -4,6 +4,28 @@
 
 .location__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.location__adress-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $desktop) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: 1;
+  }
 }
 
 .location__text {
@@ -13,6 +35,7 @@
   line-height: 18px;
   color: $special-black;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .location__adress {
@@ -21,4 +44,9 @@
   font-size: 14px;
   line-height: 20px;
   color: $special-dark-grey;
+}
+
+.location__map-wrapper {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }

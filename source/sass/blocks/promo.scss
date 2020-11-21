@@ -4,6 +4,14 @@
 
 .promo__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
 }
 
 .promo__intro {

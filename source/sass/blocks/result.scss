@@ -4,6 +4,14 @@
 
 .result__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
 }
 
 .result__heading {
@@ -22,6 +30,30 @@
   color: $special-dark-grey;
 }
 
+.result__container {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.result__calculate-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.result__list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .result__number {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -36,6 +68,21 @@
   font-size: 12px;
   line-height: 12px;
   color: $special-dark-grey;
+  margin: 0;
+}
+
+.result__calculate {
+  display: flex;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .result__cost {
@@ -45,6 +92,7 @@
   line-height: 20px;
   color: $black;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .result__count {

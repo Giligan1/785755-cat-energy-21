@@ -4,14 +4,32 @@
 
 .weight-control__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .weight-control__slimming {
   background-color: $basic-grey;
+
+  @media (min-width: $desktop) {
+    width: 47.5%;
+  }
 }
 
 .weight-control__weight-gain {
   background-color: $basic-grey;
+
+  @media (min-width: $desktop) {
+    width: 47.5%;
+  }
 }
 
 .weight-control__heading {

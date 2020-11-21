@@ -4,4 +4,14 @@
 
 .page-footer__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(30px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
 }

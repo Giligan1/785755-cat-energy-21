@@ -4,6 +4,21 @@
 
 .additional-goods__wrapper {
   @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(70px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
+}
+
+.additional-goods__container {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-goods__heading {
@@ -12,6 +27,29 @@
   font-size: 24px;
   line-height: 24px;
   color: $black;
+}
+
+.additional-goods__list {
+  list-style: none;
+  padding: 0;
+}
+
+.additional-goods__item {
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.additional-goods__item-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-goods__description-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .additional-goods__title {

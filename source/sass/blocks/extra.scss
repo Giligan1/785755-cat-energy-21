@@ -1,9 +1,38 @@
+.extra {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .extra__heading {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: $black;
+}
+
+.extra__list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.extra__item {
+  display: flex;
+
+  @media (min-width: $tablet) {
+    width: 47%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 20.5%;
+  }
 }
 
 .extra__label {

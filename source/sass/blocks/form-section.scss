@@ -2,6 +2,18 @@
   background-color: $white;
 }
 
+.form-section__wrapper {
+  @include wrapper(20px);
+
+  @media (min-width: $tablet) {
+    @include wrapper(70px);
+  }
+
+  @media (min-width: $desktop) {
+    @include wrapper(110px);
+  }
+}
+
 .form-section__text {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;

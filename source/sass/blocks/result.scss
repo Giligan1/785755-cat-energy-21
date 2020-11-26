@@ -20,6 +20,9 @@
   font-size: 36px;
   line-height: 40px;
   color: $black;
+  margin: 0;
+  padding-top: 27px;
+  margin-bottom: 33px;
 }
 
 .result__text {
@@ -28,6 +31,8 @@
   font-size: 14px;
   line-height: 18px;
   color: $special-dark-grey;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .result__container {
@@ -52,6 +57,14 @@
 .result__list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.result__item {
+  width: 44%;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .result__number {
@@ -59,7 +72,12 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
   color: $black;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  border: 1px solid $border-calculate;
 }
 
 .result__description {
@@ -68,11 +86,19 @@
   font-size: 12px;
   line-height: 12px;
   color: $special-dark-grey;
-  margin: 0;
+  text-align: center;
+  display: block;
+  width: 87px;
+  background-color: $special-grey;
+  margin: 0 auto;
+  margin-top: -8px;
+  z-index: 2;
 }
 
 .result__calculate {
   display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet) {
     display: block;
@@ -83,6 +109,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+}
+
+.result__fat-cat {
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-20px);
+}
+
+.result__slim-cat {
+  display: none;
+  margin: 0 auto;
+  transform: translateX(16px);
 }
 
 .result__cost {

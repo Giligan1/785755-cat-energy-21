@@ -6,5 +6,25 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   background-color: $basic-green;
+  display: block;
+  padding: 11px 0;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    background-color: $basic-green-2;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    display: block;
+    width: 244px;
+    padding: 14px 0;
+  }
 }

@@ -1,9 +1,9 @@
-.promo {
-  background-color: $basic-green;
-}
-
 .promo__wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: $promo-green;
   @include wrapper(20px);
+  margin-bottom: 100px;
 
   @media (min-width: $tablet) {
     @include wrapper(30px);
@@ -12,6 +12,23 @@
   @media (min-width: $desktop) {
     @include wrapper(110px);
   }
+
+  /*&::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/promo.jpg");
+    background-position: -155px 0;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }*/
+}
+
+.promo__container {
+  width: 100%;
 }
 
 .promo__intro {
@@ -20,6 +37,20 @@
   font-size: 36px;
   line-height: 36px;
   color: $white;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+    text-align: start;
+    padding: 0;
+    margin-left: 88px;
+    margin-top: 64px;
+  }
 }
 
 .promo__slogan {
@@ -29,4 +60,24 @@
   line-height: 14px;
   color: $white;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 302px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    color: $black;
+    margin-top: 41px;
+    margin-left: 88px;
+    margin-bottom: 49px;
+  }
+}
+
+.promo__link {
+  @media (min-width: $tablet) {
+    margin-left: 84px;
+    margin-bottom: 526px;
+  }
 }

@@ -37,6 +37,8 @@
   color: $special-black;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 28px;
+  padding-bottom: 22px;
 }
 
 .location__adress {
@@ -45,9 +47,13 @@
   font-size: 14px;
   line-height: 20px;
   color: $special-dark-grey;
+  padding-top: 28px;
+  margin-left: 25px;
 }
 
 .location__map-wrapper {
+  width: calc(100% + 40px);
+  margin-left: -20px;
   grid-column: 1/-1;
   grid-row: 1/-1;
 }

@@ -20,6 +20,9 @@
   font-size: 36px;
   line-height: 40px;
   color: $black;
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 38px;
 }
 
 .instruction__list {
@@ -37,9 +40,113 @@
 }
 
 .instruction__item {
+  position: relative;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: $special-dark-grey;
+  margin-bottom: 24px;
+  min-height: 54px;
+
+  &:last-child {
+    margin-bottom: 46px;
+  }
+
+  &--health::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 28px;
+    top: 16px;
+    left: 18px;
+    background-image: url("../../img/leaflet.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &--health::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $basic-green;
+  }
+
+  &--cooking::before {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 31px;
+    top: 13px;
+    left: 15px;
+    background-image: url("../../img/pan.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &--cooking::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $basic-green;
+  }
+
+  &--fork::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 30px;
+    top: 15px;
+    left: 18.5px;
+    background-image: url("../../img/eat.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &--fork::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $basic-green;
+  }
+
+  &--time::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 33px;
+    top: 13px;
+    left: 14px;
+    background-image: url("../../img/alarm.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &--time::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $basic-green;
+  }
+}
+
+.instruction__text {
+  margin: 0;
+  margin-left: 80px;
 }

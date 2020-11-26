@@ -3,6 +3,8 @@
 }
 
 .page-header__wrapper {
+  position: relative;
+
   @include wrapper(20px);
 
   @media (min-width: $tablet) {
@@ -13,5 +15,52 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  padding-top: 12px;
+  min-height: 66px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    width: 174px;
+    min-height: 52px;
+    padding: 0;
+    margin-top: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 54px;
+  }
+}
+
+.page-header__logo-image-icon {
+  margin-right: 55px;
+
+  @media (min-width: $tablet) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 14px;
+  }
+}
+
+.page-header__logo-image-text {
+  margin-top: 12px;
+
+  @media (min-width: $tablet) {
+    margin-top: 20px;
   }
 }

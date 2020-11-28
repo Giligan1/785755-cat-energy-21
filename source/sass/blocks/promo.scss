@@ -1,30 +1,73 @@
 .promo__wrapper {
   position: relative;
   z-index: 2;
-  background-color: $promo-green;
-  @include wrapper(20px);
+  background-color: $white;
   margin-bottom: 100px;
+
+  @include wrapper(20px);
 
   @media (min-width: $tablet) {
     @include wrapper(30px);
+    background-color: $white;
   }
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    z-index: auto;
   }
 
-  /*&::after {
+  &::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 302px;
     top: 0;
     left: 0;
-    background-image: url("../../img/promo.jpg");
-    background-position: -155px 0;
+    background-image: url("../../img/green-mask.png"), url("../../img/promo.jpg");
+    background-color: $promo-green;
+    background-position: 0 0, 64% 0;
+    background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
-  }*/
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 270px;
+    top: 167px;
+    left: 20px;
+    background-image: url("../../img/promo-backet.png");
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      width: 709px;
+      height: 609px;
+      background-size: contain;
+      background-position: 112px 0;
+      left: 50%;
+      top: 200px;
+      margin-left: -50%;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop) {
+      width: 552px;
+      height: 499px;
+      background-position: 0 0;
+      top: 33px;
+      left: 590px;
+      margin-left: 0;
+      z-index: 2;
+    }
+  }
 }
 
 .promo__container {
@@ -51,6 +94,12 @@
     margin-left: 88px;
     margin-top: 64px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 114px;
+    margin-top: 0;
+    margin-left: 80px;
+  }
 }
 
 .promo__slogan {
@@ -73,11 +122,22 @@
     margin-left: 88px;
     margin-bottom: 49px;
   }
+
+  @media (min-width: $desktop) {
+    margin-left: 80px;
+  }
 }
 
 .promo__link {
+  margin-bottom: 22px;
+
   @media (min-width: $tablet) {
     margin-left: 84px;
     margin-bottom: 526px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 80px;
+    margin-bottom: 267px;
   }
 }

@@ -6,6 +6,13 @@
   }
 }
 
+.main-nav__wrapper {
+  @media (min-width: $desktop) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 .main-nav__button {
   content: "";
   position: absolute;
@@ -70,6 +77,8 @@
 
 .main-nav__item {
   display: block;
+  width: calc(100% + 40px);
+  margin-left: -20px;
   text-align: center;
   padding: 22px 0 20px;
   border-top: 1px solid $border-grey;
@@ -83,6 +92,8 @@
   }
 
   @media (min-width: $tablet) {
+    width: auto;
+    margin-left: 0;
     border: none;
     padding: 8px 0;
 
@@ -90,10 +101,18 @@
       border-bottom: 2px solid $basic-green;
     }
   }
+
+  @media (min-width: $desktop) {
+    border-bottom-color: $white;
+  }
 }
 
 .main-nav__item:last-child {
   border-bottom: 1px solid $border-grey;
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+  }
 }
 
 .main-nav__link {

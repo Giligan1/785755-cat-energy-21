@@ -15,6 +15,21 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 695px;
+      top: 0;
+      right: 0;
+      background-image: url("../../img/green-mask.png"), url("../../img/promo.jpg");
+      background-color: $promo-green;
+      background-position: 0 0, 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
   }
 }
 

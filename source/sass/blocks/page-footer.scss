@@ -20,4 +20,8 @@
   padding-top: 39px;
   padding-bottom: 27px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+  }
 }

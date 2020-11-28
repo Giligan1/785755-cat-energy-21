@@ -1,6 +1,12 @@
 .social {
   border-top: 1px solid $border-grey-2;
   border-bottom: 1px solid $border-grey-2;
+
+  @media (min-width: $tablet) {
+    width: 130px;
+    border: none;
+    margin-left: 27px;
+  }
 }
 
 .social__list {
@@ -9,7 +15,13 @@
   padding: 23px 0 15px;
   display: flex;
   justify-content: space-between;
-  width: 46.4%;
+  width: 130px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    padding: 0;
+    padding-top: 56px;
+  }
 }
 
 .social__item {
@@ -23,7 +35,7 @@
 
 .social__link--vkontakte {
   & path {
-  fill: $special-grey-2;
+    fill: $special-grey-2;
   }
 
   &:hover path {
@@ -32,12 +44,19 @@
 
   &:active path {
     fill: transparentize($basic-green, 0.3);
+  }
+
+  @media (min-width: $tablet) {
+    & svg {
+      width: 29px;
+      height: 17px;
+    }
   }
 }
 
 .social__link--instagram {
   & path {
-  fill: $special-grey-2;
+    fill: $special-grey-2;
   }
 
   &:hover path {
@@ -46,6 +65,15 @@
 
   &:active path {
     fill: transparentize($basic-green, 0.3);
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 3px;
+
+    & svg {
+      width: 23px;
+      height: 23px;
+    }
   }
 }
 
@@ -58,5 +86,12 @@
 
   &:active path {
     stroke: transparentize($basic-green, 0.3);
+  }
+
+  @media (min-width: $tablet) {
+    & svg {
+      width: 20px;
+      height: 27px;
+    }
   }
 }

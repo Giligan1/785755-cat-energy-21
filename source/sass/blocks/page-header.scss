@@ -3,6 +3,8 @@
 }
 
 .page-header__wrapper {
+  position: relative;
+
   @include wrapper(20px);
 
   @media (min-width: $tablet) {
@@ -13,5 +15,67 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 695px;
+      top: 0;
+      right: 0;
+      background-image: url("../../img/green-mask.png"), url("../../img/promo.jpg");
+      background-color: $promo-green;
+      background-position: 0 0, 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  padding-top: 12px;
+  min-height: 66px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    width: 174px;
+    min-height: 52px;
+    padding: 0;
+    margin-top: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 54px;
+  }
+}
+
+.page-header__logo-image-icon {
+  margin-right: 55px;
+
+  @media (min-width: $tablet) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 14px;
+  }
+}
+
+.page-header__logo-image-text {
+  margin-top: 12px;
+
+  @media (min-width: $tablet) {
+    margin-top: 20px;
   }
 }

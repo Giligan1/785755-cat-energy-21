@@ -1,7 +1,40 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    width: 163px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 58px;
+  }
+
+  & svg {
+    fill: $special-grey-2;
+  }
+
+  &:hover svg {
+    fill: $basic-green;
+  }
+
+  &:active .copyright__text {
+    color: transparentize($special-dark-grey, 0.3);
+  }
+
+  &:active svg {
+    fill: transparentize($basic-green, 0.3);
+  }
+}
+
 .copyright__text {
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: $special-dark-grey;
+  margin-top: 7px;
 }

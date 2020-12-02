@@ -10,28 +10,90 @@
   font-size: 24px;
   line-height: 26px;
   color: $black;
+  margin-bottom: 18px;
+  display: block;
+  width: calc(100% + 20px);
+  position: relative;
+
+  &--underline::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 0;
+    width: 46%;
+    height: 2px;
+    background-color: $basic-green;
+
+    @media (min-width: $tablet) {
+      top: 65px;
+      right: 0;
+      width: 62%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 76.5%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: calc(100% + 140px);
+    padding-left: 70px;
+    padding-top: 43px;
+    padding-bottom: 42px;
+    margin-left: -70px;
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 65px;
+      left: 0;
+      width: 4%;
+      height: 2px;
+      background-color: $basic-green;
+
+      @media (min-width: $desktop) {
+        width: 4.5%;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: calc(100% + 220px);
+    padding-left: 110px;
+    margin-left: -110px;
+  }
 }
 
 .extra__list {
   list-style: none;
   padding: 0;
+  padding-bottom: 6px;
 
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 24px;
+  }
 }
 
 .extra__item {
   display: flex;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet) {
-    width: 47%;
+    width: 45%;
+    margin-bottom: 31px;
   }
 
   @media (min-width: $desktop) {
-    width: 20.5%;
+    width: 20%;
   }
 }
 
@@ -42,4 +104,64 @@
   line-height: 18px;
   color: $black;
   text-transform: uppercase;
+  position: relative;
+  padding: 6px 0;
+  padding-left: 46px;
+  display: block;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 1px solid $border-calculate;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border: 1px solid $radio-hover;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px 0 5px 57px;
+  }
+}
+
+.extra__input {
+  &:checked + .extra__label::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 14px;
+    top: 8px;
+    left: 6px;
+    background-image: url("../../img/check-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 0;
+
+    @media (min-width: $tablet) {
+      top: 13px;
+      left: 11px;
+    }
+  }
+
+  &:disabled + .extra__label {
+    color: transparentize($black, 0.7);
+
+    &::before {
+      border-color: transparentize($border-calculate, 0.7);
+    }
+  }
 }

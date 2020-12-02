@@ -16,7 +16,7 @@
   @media (min-width: $desktop) {
     @include wrapper(110px);
 
-    &::after {
+    &--background::after {
       position: absolute;
       content: "";
       width: 50%;

@@ -14,8 +14,28 @@
   display: block;
   width: calc(100% + 20px);
   position: relative;
+  box-sizing: border-box;
 
-  &--underline::before {
+  @media (min-width: $tablet) {
+    width: calc(100% + 140px);
+    padding-left: 70px;
+    padding-top: 43px;
+    padding-bottom: 42px;
+    margin-left: -70px;
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    width: calc(100% + 220px);
+    padding-left: 110px;
+    margin-left: -110px;
+  }
+}
+
+.extra__heading--underline {
+  &::before {
     position: absolute;
     content: "";
     top: 15px;
@@ -35,17 +55,8 @@
     }
   }
 
-  @media (min-width: $tablet) {
-    width: calc(100% + 140px);
-    padding-left: 70px;
-    padding-top: 43px;
-    padding-bottom: 42px;
-    margin-left: -70px;
-    margin-bottom: 0;
-    font-size: 36px;
-    line-height: 36px;
-
-    &::after {
+  &::after {
+    @media (min-width: $tablet) {
       position: absolute;
       content: "";
       top: 65px;
@@ -53,17 +64,11 @@
       width: 4%;
       height: 2px;
       background-color: $basic-green;
-
-      @media (min-width: $desktop) {
-        width: 4.5%;
-      }
     }
-  }
 
-  @media (min-width: $desktop) {
-    width: calc(100% + 220px);
-    padding-left: 110px;
-    margin-left: -110px;
+    @media (min-width: $desktop) {
+      width: 4.5%;
+    }
   }
 }
 

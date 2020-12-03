@@ -15,8 +15,33 @@
   display: block;
   width: calc(100% + 20px);
   position: relative;
+  box-sizing: border-box;
 
-  &--underline::before {
+  @media (min-width: $tablet) {
+    width: calc(100% + 140px);
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 75px;
+    padding-left: 70px;
+    padding-bottom: 76px;
+    margin-left: -70px;
+    margin-bottom: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: calc(100% + 220px);
+    padding-left: 110px;
+    margin-left: -110px;
+    padding-top: 67px;
+  }
+}
+
+.contact-details__heading--underline {
+  &::before {
     position: absolute;
     content: "";
     top: 42px;
@@ -34,25 +59,12 @@
     @media (min-width: $desktop) {
       top: 89px;
       right: 0;
-      width: 57.5%;
+      width: 54%;
     }
   }
 
-  @media (min-width: $tablet) {
-    width: calc(100% + 140px);
-    font-size: 36px;
-    line-height: 36px;
-    padding-top: 75px;
-    padding-left: 70px;
-    padding-bottom: 76px;
-    margin-left: -70px;
-    margin-bottom: 0;
-
-    br {
-      display: none;
-    }
-
-    &::after {
+  &::after {
+    @media (min-width: $tablet) {
       position: absolute;
       content: "";
       top: 97px;
@@ -66,13 +78,6 @@
         top: 89px;
       }
     }
-  }
-
-  @media (min-width: $desktop) {
-    width: calc(100% + 220px);
-    padding-left: 110px;
-    margin-left: -110px;
-    padding-top: 67px;
   }
 }
 

@@ -17,6 +17,7 @@
 .products__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -26,6 +27,84 @@
 }
 
 .products__item {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border-grey;
+  box-sizing: border-box;
+  min-height: 209px;
+  position: relative;
+
+  &:nth-of-type(2n+1) .products__image {
+    margin-left: 56px;
+    margin-top: 30px;
+  }
+
+  &:nth-of-type(2n) .products__image {
+    margin-left: 46px;
+    margin-top: 30px;
+  }
+
+  &:nth-of-type(3) .products__image {
+    margin-left: 56px;
+    margin-top: 43px;
+  }
+
+  &:nth-of-type(7) .products__image {
+    margin-left: 54px;
+    margin-top: 38px;
+  }
+
+  &:nth-of-type(5) .products__image {
+    margin-top: 43px;
+    margin-left: 56px;
+  }
+
+  & .products__info {
+    margin-right: 20px;
+  }
+
+  &:first-of-type .products__info {
+    margin-top: -45px;
+  }
+
+  &:nth-of-type(2n) .products__info {
+    margin-top: -58px;
+  }
+
+  &:nth-of-type(2n+3) .products__info {
+    margin-top: -50px;
+  }
+
+  &:nth-of-type(7) .products__info {
+    margin-top: -53px;
+  }
+
+  &--plus {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 40px;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 2px;
+      background-color: $plus;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 40px;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 2px;
+      background-color: $plus;
+      transform: rotate(90deg);
+    }
+  }
+
   @media (min-width: $tablet) {
     width: 45%;
   }
@@ -42,9 +121,15 @@
   }
 }
 
-
 .products__link-description {
+  display: flex;
   text-decoration: none;
+}
+
+.products__link-purchase {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 20px;
 }
 
 .products__description {
@@ -52,6 +137,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  width: 50%;
+  padding-top: 18px;
+  margin: 0;
+  margin-left: auto;
   color: $special-dark-grey-2;
   text-transform: uppercase;
 }

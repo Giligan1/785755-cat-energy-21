@@ -27,14 +27,22 @@
   font-size: 24px;
   line-height: 24px;
   color: $black;
+  padding-top: 24px;
+  padding-bottom: 34px;
+  margin: 0;
+  border-bottom: 1px solid $border-calculate;
 }
 
 .additional-goods__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .additional-goods__item {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-calculate;
+
   @media (min-width: $desktop) {
     display: flex;
   }
@@ -50,6 +58,8 @@
 .additional-goods__description-list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding-bottom: 16px;
 }
 
 .additional-goods__title {
@@ -59,6 +69,9 @@
   line-height: 16px;
   color: $special-dark-grey-2;
   text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
 .additional-goods__parameter {
@@ -75,4 +88,9 @@
   font-size: 14px;
   line-height: 14px;
   color: $special-dark-grey;
+}
+
+.additional-goods__link {
+  font-size: 16px;
+  line-height: 20px;
 }

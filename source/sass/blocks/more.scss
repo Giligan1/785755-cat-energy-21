@@ -7,6 +7,9 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  padding-top: 77px;
+  margin: 0;
   color: $special-black;
   text-transform: uppercase;
 }
@@ -16,6 +19,10 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 21px;
+  margin: 0;
   color: $special-dark-grey;
 }
 
@@ -24,6 +31,21 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  text-decoration: none;
   color: $special-dark-grey;
   text-transform: uppercase;
+  background-color: $basic-grey;
+  display: block;
+  padding: 20px 0;
+  margin: 0 20px;
+
+  &:hover {
+    background-color: $border-grey;
+  }
+
+  &:active {
+    background-color: $border-grey;
+    color: transparentize($special-dark-grey, 0.7);
+  }
 }

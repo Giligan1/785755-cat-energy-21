@@ -7,5 +7,27 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   color: $white;
+  padding-top: 186px;
+  padding-bottom: 43px;
+  margin-top: 39px;
+  margin-bottom: 35px;
+  position: relative;
+  background-image: url("../../img/gift.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 58px;
+    left: 50%;
+    margin-left: -36px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/gift-icon.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
 }

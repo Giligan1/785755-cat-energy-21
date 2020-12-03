@@ -1,7 +1,8 @@
 .location {
   background-color: $white;
 
-  &--form-background {
+  &--form-background,
+  &--catalog-background {
     background-color: $basic-grey;
   }
 }

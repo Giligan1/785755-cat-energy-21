@@ -104,10 +104,12 @@
 
   @media (min-width: $desktop) {
     border-bottom-color: $white;
+  }
+}
 
-    &--form-active {
-      border-bottom: 2px solid $basic-green;
-    }
+.main-nav__item--inner-active {
+  @media (min-width: $tablet) {
+    border-bottom: 2px solid $basic-green;
   }
 }
 
@@ -120,14 +122,28 @@
   color: $black;
   text-decoration: none;
 
-  &-form {
+  &-inner {
     font-family: "Oswald", "Arial", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 20px;
     text-transform: uppercase;
-    color: $special-black;
+    color: #000000;
     text-decoration: none;
+
+    @media (min-width: $tablet) {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $special-black;
+      text-decoration: none;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   @media (min-width: $tablet) {

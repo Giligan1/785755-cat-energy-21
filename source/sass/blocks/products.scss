@@ -6,7 +6,7 @@
   @include wrapper(20px);
 
   @media (min-width: $tablet) {
-    @include wrapper(70px);
+    @include wrapper(30px);
   }
 
   @media (min-width: $desktop) {
@@ -17,6 +17,7 @@
 .products__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -26,13 +27,127 @@
 }
 
 .products__item {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border-grey;
+  box-sizing: border-box;
+  min-height: 209px;
+  position: relative;
+
+  &:nth-of-type(2n+1) .products__image {
+    margin-left: 56px;
+    margin-top: 30px;
+  }
+
+  &:nth-of-type(2n) .products__image {
+    margin-left: 46px;
+    margin-top: 30px;
+  }
+
+  &:nth-of-type(3) .products__image {
+    margin-left: 56px;
+    margin-top: 43px;
+  }
+
+  &:nth-of-type(7) .products__image {
+    margin-left: 54px;
+    margin-top: 38px;
+  }
+
+  &:nth-of-type(5) .products__image {
+    margin-top: 43px;
+    margin-left: 56px;
+  }
+
+  &:nth-of-type(2n+1) .products__image-tablet {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    margin-left: -82px;
+
+    @media (min-width: $desktop) {
+      top: -51px;
+    }
+  }
+
+  &:nth-of-type(2n) .products__image-tablet {
+    position: absolute;
+    top: -73px;
+    left: 50%;
+    margin-left: -84px;
+
+    @media (min-width: $desktop) {
+      top: -78px;
+    }
+  }
+
+  & .products__info {
+    margin-right: 20px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 32px;
+    }
+  }
+
+  &:first-of-type .products__info {
+    margin-top: -45px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-of-type(2n) .products__info {
+    margin-top: -58px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-of-type(2n+3) .products__info {
+    margin-top: -50px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-of-type(7) .products__info {
+    margin-top: -53px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
   @media (min-width: $tablet) {
-    width: 45%;
+    width: 46%;
+    margin: 0;
+    background-color: $basic-grey;
+    border-bottom: none;
+    padding: 0 38px;
+    margin-bottom: 140px;
+    box-sizing: border-box;
+
+    &:nth-last-child(-n+2),
+    &:nth-last-child(1) {
+      margin-bottom: 42px;
+    }
   }
 
   @media (min-width: $desktop) {
     width: 20%;
     margin-right: 80px;
+    margin-bottom: 142px;
+
+    &:nth-last-child(-n+4),
+    &:nth-last-child(-n+3),
+    &:nth-last-child(-n+2),
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
   }
 
   &:nth-child(4n) {
@@ -42,9 +157,74 @@
   }
 }
 
+.products__image {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.products__image-tablet {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.products__item--plus {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $plus;
+
+    @media (min-width: $tablet) {
+      top: 82px;
+      width: 60px;
+      margin-left: -30px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $plus;
+    transform: rotate(90deg);
+
+    @media (min-width: $tablet) {
+      top: 82px;
+      width: 60px;
+      margin-left: -30px;
+    }
+  }
+}
 
 .products__link-description {
+  display: flex;
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.products__link-purchase {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 10px 0;
+    margin: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .products__description {
@@ -52,6 +232,25 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  width: 50%;
+  padding-top: 18px;
+  margin: 0;
+  margin-left: auto;
   color: $special-dark-grey-2;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    padding-top: 161px;
+    padding-bottom: 17px;
+    width: 155px;
+
+    br {
+      display: none;
+    }
+  }
 }

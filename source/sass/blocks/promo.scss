@@ -23,12 +23,17 @@
     height: 302px;
     top: 0;
     left: 0;
-    background-image: url("../../img/green-mask.png"), url("../../img/promo.jpg");
+    background-image: url("../../img/green-mask.png"), url("../../img/promo-mobile.jpg");
     background-color: $promo-green;
     background-position: 0 0, 64% 0;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/green-mask.png"), url("../../img/promo-mobile@2x.jpg");
+      background-size: cover;
+    }
 
     @media (min-width: $tablet) {
       display: none;
@@ -42,30 +47,45 @@
     height: 270px;
     top: 167px;
     left: 20px;
-    background-image: url("../../img/promo-backet.png");
+    background-image: url("../../img/promo-backet-mobile.png");
     background-color: transparent;
     background-position: 0 0;
     background-repeat: no-repeat;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/promo-backet-mobile@2x.png");
+      background-size: cover;
+    }
+
     @media (min-width: $tablet) {
       width: 709px;
       height: 609px;
+      background-image: url("../../img/promo-backet-tablet.png");
       background-size: contain;
-      background-position: 112px 0;
+      background-position: 29px 0;
       left: 50%;
       top: 200px;
       margin-left: -50%;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/promo-backet-tablet@2x.png");
+      }
     }
 
     @media (min-width: $desktop) {
       width: 552px;
       height: 499px;
+      background-image: url("../../img/promo-backet-desktop.png");
       background-position: 0 0;
-      top: 33px;
-      left: 590px;
+      top: 21px;
+      left: 558px;
       margin-left: 0;
       z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/promo-backet-desktop@2x.png");
+      }
     }
   }
 }
@@ -96,7 +116,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 114px;
+    padding-top: 104px;
     margin-top: 0;
     margin-left: 80px;
   }

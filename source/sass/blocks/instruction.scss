@@ -88,8 +88,10 @@
   @media (min-width: $desktop) {
     margin-bottom: 30px;
   }
+}
 
-  &--health::before {
+.instruction__item--health {
+  &::before {
     position: absolute;
     content: "";
     width: 60px;
@@ -108,7 +110,7 @@
     }
   }
 
-  &--health::after {
+  &::after {
     display: none;
     position: absolute;
     content: "";
@@ -125,8 +127,10 @@
       display: block;
     }
   }
+}
 
-  &--cooking::before {
+.instruction__item--cooking {
+  &::before {
     position: absolute;
     content: "";
     width: 60px;
@@ -145,7 +149,7 @@
     }
   }
 
-  &--cooking::after {
+  &::after {
     display: none;
     position: absolute;
     content: "";
@@ -162,8 +166,10 @@
       display: block;
     }
   }
+}
 
-  &--fork::before {
+.instruction__item--fork {
+  &::before {
     position: absolute;
     content: "";
     width: 60px;
@@ -182,7 +188,7 @@
     }
   }
 
-  &--fork::after {
+  &::after {
     display: none;
     position: absolute;
     content: "";
@@ -199,8 +205,10 @@
       display: block;
     }
   }
+}
 
-  &--time::before {
+.instruction__item--time {
+  &::before {
     position: absolute;
     content: "";
     width: 60px;
@@ -219,7 +227,7 @@
     }
   }
 
-  &--time::after {
+  &::after {
     display: none;
     position: absolute;
     content: "";

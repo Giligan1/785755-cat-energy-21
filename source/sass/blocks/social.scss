@@ -34,15 +34,15 @@
 }
 
 .social__link--vkontakte {
-  & path {
+  & svg {
     fill: $special-grey-2;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: $basic-green;
   }
 
-  &:active path {
+  &:active svg {
     fill: transparentize($basic-green, 0.3);
   }
 
@@ -55,15 +55,15 @@
 }
 
 .social__link--instagram {
-  & path {
+  & svg {
     fill: $special-grey-2;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: $basic-green;
   }
 
-  &:active path {
+  &:active svg {
     fill: transparentize($basic-green, 0.3);
   }
 
@@ -79,12 +79,13 @@
 
 .social__link--facebook {
   stroke: $special-grey-2;
+  fill: none;
 
-  &:hover path {
+  &:hover svg {
     stroke: $basic-green;
   }
 
-  &:active path {
+  &:active svg {
     stroke: transparentize($basic-green, 0.3);
   }
 

@@ -97,36 +97,6 @@
   position: relative;
   margin-bottom: 12px;
 
-  &--letter {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 15px;
-    right: 16px;
-    top: 13px;
-    stroke: $special-dark-grey-2;
-
-    @media (min-width: $tablet) {
-      right: 22px;
-      top: 18px;
-    }
-  }
-
-  &--phone {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 21px;
-    right: 13px;
-    top: 12px;
-    fill: $black;
-
-    @media (min-width: $tablet) {
-      right: 21px;
-      top: 16px;
-    }
-  }
-
   @media (min-width: $tablet) {
     margin-bottom: 20px;
   }
@@ -137,6 +107,37 @@
     &:nth-of-type(2) .contact-details__input {
       margin-left: 15px;
     }
+  }
+}
+
+.contact-details__item--letter {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 15px;
+  right: 16px;
+  top: 13px;
+  stroke: $special-dark-grey-2;
+  fill: none;
+
+  @media (min-width: $tablet) {
+    right: 22px;
+    top: 18px;
+  }
+}
+
+.contact-details__item--phone {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 21px;
+  right: 13px;
+  top: 12px;
+  fill: $black;
+
+  @media (min-width: $tablet) {
+    right: 21px;
+    top: 16px;
   }
 }
 

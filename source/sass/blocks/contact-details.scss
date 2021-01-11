@@ -53,7 +53,7 @@
     @media (min-width: $tablet) {
       top: 97px;
       right: 0;
-      width: 27%;
+      width: 19%;
     }
 
     @media (min-width: $desktop) {
@@ -84,6 +84,7 @@
 .contact-details__list {
   list-style: none;
   margin: 0;
+  padding: 0;
   padding-bottom: 11px;
 
   @media (min-width: $desktop) {
@@ -110,7 +111,7 @@
   }
 }
 
-.contact-details__item--letter {
+.contact-details__letter {
   position: absolute;
   content: "";
   width: 20px;
@@ -126,7 +127,7 @@
   }
 }
 
-.contact-details__item--phone {
+.contact-details__phone {
   position: absolute;
   content: "";
   width: 20px;
@@ -204,19 +205,19 @@
     margin-left: 21px;
   }
 
-  &:focus + .contact-details__item--letter {
+  &:focus + .contact-details__letter {
     stroke: $basic-green;
   }
 
-  &:invalid + .contact-details__item--letter {
+  &:invalid + .contact-details__letter {
     stroke: $error-input;
   }
 
-  &:focus + .contact-details__item--phone {
+  &:focus + .contact-details__phone {
     fill: $basic-green;
   }
 
-  &:invalid + .contact-details__item--phone {
+  &:invalid + .contact-details__phone {
     fill: $error-input;
   }
 }

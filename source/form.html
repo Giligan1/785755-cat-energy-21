@@ -94,10 +94,10 @@
                   <input class="about-cat__input" type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
                 <label class="about-cat__label">Вес (кг):*
-                  <input class="about-cat__input" type="number" name="cat-weight" placeholder="7" required>
+                  <input class="about-cat__input" type="text" name="cat-weight" placeholder="7" required>
                 </label>
                 <label class="about-cat__label">Возраст (лет):
-                  <input class="about-cat__input" type="number" name="cat-age" placeholder="7">
+                  <input class="about-cat__input" type="text" name="cat-age" placeholder="7">
                 </label>
               </fieldset>
               <fieldset class="form__kind-of-food kind-of-food">
@@ -119,19 +119,19 @@
               </fieldset>
             </div>
             <fieldset class="form__contact-details contact-details">
-              <legend class="contact-details__heading contact-details__heading--underline">Контактные данные <br> (владельца кота)</legend>
-              <div class="contact-details__list">
+              <legend class="contact-details__heading contact-details__heading--underline">Контактные данные<br> (владельца кота)</legend>
+              <ul class="contact-details__list">
                 <li class="contact-details__item">
                   <label class="contact-details__label" for="tel">E-mail:*</label>
                   <input class="contact-details__input" id="tel" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="contact-details__item--letter" width="20" height="15">
+                  <svg class="contact-details__letter" width="20" height="15">
                     <use xlink:href="#email-icon"></use>
                   </svg>
                 </li>
                 <li class="contact-details__item">
                   <label class="contact-details__label" for="phone">Телефон:*</label>
                   <input class="contact-details__input" id="phone" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
-                  <svg class="contact-details__item--phone" width="20" height="21">
+                  <svg class="contact-details__phone" width="20" height="21">
                     <use xlink:href="#phone-icon"></use>
                   </svg>
                 </li>
@@ -180,7 +180,7 @@
             <address class="location__adress">ул. Большая <br> Конюшенная, д. 19/8 <br> <span class="location__city"> Санкт-Петербург</span></address>
           </div>
           <div class="location__map-wrapper">
-            <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.214070321069!2d30.32135800976628!3d59.93866259150999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606330312828!5m2!1sru!2sru" width="100%" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.214070321069!2d30.32135800976628!3d59.93866259150999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606330312828!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </section>
@@ -190,7 +190,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a href="index.html" class="page-footer__logo-link">
-            <img class="page-footer__logo-image" src="img/footer-logo.svg" width="128px" height="24" alt="Кэт энерджи">
+            <img class="page-footer__logo-image" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи">
           </a>
         </div>
         <div class="page-footer__social social">

@@ -70,8 +70,10 @@
   }
 
   & .products__image {
-    width: 168px;
-    height: 206px;
+    @media (min-width: $tablet) {
+      width: 168px;
+      height: 206px;
+    }
   }
 
   &:nth-of-type(1) .products__image {

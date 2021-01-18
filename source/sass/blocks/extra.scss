@@ -13,7 +13,6 @@
   margin-bottom: 18px;
   display: block;
   width: calc(100% + 20px);
-  position: relative;
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
@@ -38,20 +37,21 @@
   &::before {
     position: absolute;
     content: "";
-    top: 15px;
+    top: 912px;
     right: 0;
-    width: 46%;
+    width: 43%;
     height: 2px;
     background-color: $basic-green;
 
     @media (min-width: $tablet) {
-      top: 65px;
+      top: 1337px;
       right: 0;
       width: 58%;
     }
 
     @media (min-width: $desktop) {
-      width: 76.5%;
+      top: 997px;
+      width: calc(50% + 360px);
     }
   }
 
@@ -59,7 +59,7 @@
     @media (min-width: $tablet) {
       position: absolute;
       content: "";
-      top: 65px;
+      top: 1337px;
       left: 0;
       width: 4%;
       height: 2px;
@@ -67,6 +67,7 @@
     }
 
     @media (min-width: $desktop) {
+      top: 997px;
       width: 4.5%;
     }
   }
@@ -160,6 +161,10 @@
       top: 13px;
       left: 11px;
     }
+  }
+
+  &:focus + .extra__label::before {
+    border: 1px solid $radio-hover;
   }
 
   &:disabled + .extra__label {

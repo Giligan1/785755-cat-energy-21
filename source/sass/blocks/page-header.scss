@@ -3,8 +3,6 @@
 }
 
 .page-header__wrapper {
-  position: relative;
-
   @include wrapper(20px);
 
   @media (min-width: $tablet) {
@@ -15,6 +13,9 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -27,7 +28,7 @@
       height: 695px;
       top: 0;
       right: 0;
-      background-image: url("../../img/green-mask.png"), url("../../img/promo-desktop.jpg");
+      background-image: url("../img/green-mask.png"), url("../img/promo-desktop.jpg");
       background-color: $promo-green;
       background-position: 0 0, 0 0;
       background-size: cover;
@@ -35,7 +36,7 @@
       z-index: 1;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/green-mask.png"), url("../../img/promo-desktop@2x.jpg");
+        background-image: url("../img/green-mask.png"), url("../img/promo-desktop@2x.jpg");
       }
     }
   }

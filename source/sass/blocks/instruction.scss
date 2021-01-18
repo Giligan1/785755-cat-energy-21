@@ -12,6 +12,9 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     border-bottom: none;
   }
 }
@@ -68,12 +71,6 @@
     @media (min-width: $tablet) {
       margin-bottom: 0;
     }
-
-    @media (min-width: $desktop) {
-      br {
-        display: none;
-      }
-    }
   }
 
   @media (min-width: $tablet) {
@@ -98,7 +95,7 @@
     height: 60px;
     top: 0;
     left: 0;
-    background-image: url("../../img/leaflet.svg");
+    background-image: url("../img/leaflet.svg");
     background-position: 50% 50%;
     background-color: $basic-green;
     background-repeat: no-repeat;
@@ -118,7 +115,7 @@
     height: 280px;
     top: 0;
     left: 125px;
-    background-image: url("../../img/first-instruction.png");
+    background-image: url("../img/first-instruction.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: -1;
@@ -137,7 +134,7 @@
     height: 60px;
     top: 0;
     left: 0;
-    background-image: url("../../img/pan.svg");
+    background-image: url("../img/pan.svg");
     background-position: 50% 50%;
     background-color: $basic-green;
     background-repeat: no-repeat;
@@ -157,7 +154,7 @@
     height: 280px;
     top: 0;
     left: 125px;
-    background-image: url("../../img/second-instruction.png");
+    background-image: url("../img/second-instruction.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: -1;
@@ -176,7 +173,7 @@
     height: 60px;
     top: 0;
     left: 0;
-    background-image: url("../../img/eat.svg");
+    background-image: url("../img/eat.svg");
     background-color: $basic-green;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -196,7 +193,7 @@
     height: 280px;
     top: 0;
     left: 125px;
-    background-image: url("../../img/third-instruction.png");
+    background-image: url("../img/third-instruction.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: -1;
@@ -215,7 +212,7 @@
     height: 60px;
     top: 0;
     left: 0;
-    background-image: url("../../img/alarm.svg");
+    background-image: url("../img/alarm.svg");
     background-color: $basic-green;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -235,7 +232,7 @@
     height: 280px;
     top: 0;
     left: 125px;
-    background-image: url("../../img/fourth-instruction.png");
+    background-image: url("../img/fourth-instruction.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: -1;
@@ -271,5 +268,11 @@
     br {
       display: block;
     }
+  }
+}
+
+.instruction__space {
+  @media (min-width: $tablet) {
+    display: none;
   }
 }

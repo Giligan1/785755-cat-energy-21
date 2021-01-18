@@ -4,6 +4,10 @@
   @media (min-width: $tablet) {
     background-color: $white;
   }
+
+  @media (min-width: $desktop) {
+    background: linear-gradient(to bottom, $white 22.7%, $special-grey 22.7%);
+  }
 }
 
 .result__wrapper {
@@ -15,6 +19,9 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -48,13 +55,8 @@
   font-size: 14px;
   line-height: 18px;
   color: $special-dark-grey;
-  padding-right: 5px;
   margin: 0;
   margin-bottom: 25px;
-
-  br {
-    display: none;
-  }
 
   @media (min-width: $tablet) {
     font-size: 16px;
@@ -67,10 +69,7 @@
     padding-top: 70px;
     margin-left: 110px;
     margin-bottom: 69px;
-
-    br {
-      display: block;
-    }
+    padding-right: 175px;
   }
 }
 
@@ -368,11 +367,20 @@
   line-height: 20px;
   color: $black;
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dashed $border-dashed;
-    margin-top: 3px;
+
+    &:hover {
+      border-bottom: 1px solid $hover-button;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }

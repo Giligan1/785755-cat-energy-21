@@ -7,12 +7,17 @@
 
   @media (min-width: $tablet) {
     @include wrapper(30px);
+
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -23,5 +28,6 @@
 
   @media (min-width: $tablet) {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

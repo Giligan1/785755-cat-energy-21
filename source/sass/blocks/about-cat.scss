@@ -27,7 +27,7 @@
   display: flex;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
   white-space: nowrap;
 
   &:hover .about-cat__input {
@@ -62,6 +62,12 @@
 }
 
 .about-cat__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-dark-grey;
+  text-transform: uppercase;
   margin-left: 14px;
   width: 100%;
   padding: 13px 0 13px 15px;
@@ -79,10 +85,13 @@
     @media (min-width: $tablet) {
       font-size: 20px;
       line-height: 30px;
+      color: $special-dark-grey;
     }
   }
 
   @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
     padding: 10px 0 3px 20px;
     margin-left: 18px;
     height: 54px;

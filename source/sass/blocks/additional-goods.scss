@@ -1,5 +1,6 @@
 .additional-goods {
   background-color: $white;
+  position: relative;
 }
 
 .additional-goods__wrapper {
@@ -11,20 +12,18 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
 .additional-goods__container {
   @media (min-width: $desktop) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 895px auto;
     justify-content: space-between;
     margin-bottom: 86px;
-  }
-}
-
-.additional-goods__goods-container {
-  @media (min-width: $desktop) {
-    width: 73.4%;
   }
 }
 
@@ -47,27 +46,27 @@
   padding-bottom: 34px;
   margin: 0;
   border-bottom: 1px solid $border-calculate;
-  position: relative;
+
 
   &::after {
     position: absolute;
     content: "";
-    top: 39px;
-    right: -20px;
-    width: 19%;
+    top: 37px;
+    right: 0;
+    width: 17%;
     height: 2px;
     background-color: $basic-green;
 
     @media (min-width: $tablet) {
       top: 45px;
-      right: -30px;
-      width: 46%;
+      right: 0;
+      width: 43%;
     }
 
     @media (min-width: $desktop) {
       top: 99px;
-      right: -110px;
-      width: 78.5%;
+      right: 0;
+      width: calc(50% + 237px);
     }
   }
 
@@ -82,15 +81,15 @@
       position: absolute;
       content: "";
       top: 45px;
-      left: -30px;
+      left: 0;
       width: 4%;
       height: 2px;
       background-color: $basic-green;
 
       @media (min-width: $desktop) {
         top: 99px;
-        left: -110px;
-        width: 6%;
+        left: 0;
+        width: 5%;
       }
     }
   }
@@ -108,6 +107,7 @@
 
   @media (min-width: $tablet) {
     border: 1px solid $border-calculate;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop) {
@@ -120,6 +120,8 @@
   border-bottom: 1px solid $border-calculate;
 
   @media (min-width: $tablet) {
+    padding-bottom: 16px;
+
     &:nth-of-type(2) .additional-goods__value {
       margin-left: 60px;
 

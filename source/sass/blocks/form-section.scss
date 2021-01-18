@@ -1,5 +1,6 @@
 .form-section {
   background-color: $white;
+  position: relative;
 }
 
 .form-section__wrapper {
@@ -7,11 +8,14 @@
 
   @media (min-width: $tablet) {
     @include wrapper(70px);
-    padding-bottom: 72px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     padding-bottom: 81px;
   }
 }

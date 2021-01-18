@@ -39,7 +39,7 @@
             <img class="page-header__logo-image-text name-logo-image" src="img/logo-text.svg" alt="Кэт энерджи" width="101" height="18">
           </picture>
         </a>
-        <nav class="main-nav main-nav--closed main-nav__wrapper">
+        <nav class="main-nav main-nav--closed main-nav__wrapper"> <!-- main-nav--closed - меню закрыто, main-nav--opened - меню открыто -->
           <button class="main-nav__button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -115,22 +115,22 @@
           <ul class="instruction__list">
             <li class="instruction__item instruction__item--health">
               <p class="instruction__text">
-              Функциональное питание <br> содержит только полезные <br> питательные вещества.
+              Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="instruction__item instruction__item--cooking">
               <p class="instruction__text">
-              Выпускается в виде порошка, <br> который нужно лишь залить <br> кипятком и готово.
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
             <li class="instruction__item instruction__item--fork">
               <p class="instruction__text">
-              Замените один-два приема <br> обычной еды на наше <br> функциональное питание.
+              Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
             <li class="instruction__item instruction__item--time">
               <p class="instruction__text">
-              Уже через месяц наслаждайтесь <br> изменениями к лучшему <br> вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему<br><span class="instruction__space">&nbsp;</span>вашего питомца!
               </p>
             </li>
           </ul>
@@ -144,7 +144,7 @@
           <div class="result__container">
             <div class="result__calculate-container">
               <p class="result__text">
-                Борис сбросил 5 кг за 2 месяца, просто заменив свой <br> обычный корм на Cat Energy Slim. Отличный результат <br> без изнуряющих тренировок! При этом он не менял своих <br> привычек и по-прежнему спит по 16 часов в день.
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
               <div class="result__calculate-wrapper">
                 <dl class="result__list">
@@ -153,7 +153,7 @@
                       5 кг
                     </dt>
                     <dd class="result__description">
-                      снижение <br> веса
+                      снижение<br>&nbsp;веса
                     </dd>
                   </div>
                   <div class="result__item">
@@ -161,7 +161,7 @@
                       60 дней
                     </dt>
                     <dd class="result__description">
-                      затрачено <br> времени
+                      затрачено<br>&nbsp;времени
                     </dd>
                   </div>
                 </dl>
@@ -195,13 +195,13 @@
                 </div>
               </div>
               <div class="result__bottom">
-                <span class="result__before-text">Было</span>
+                <button type="button" class="result__before-text">Было</button>
                 <div class="result__toggle slider">
                   <div class="slider__range"></div>
-                  <div class="slider__toggle-range"></div>
-                  <div class="slider__toggle slider__toggle--fat"></div>
+                  <button type="button" class="slider__toggle-range"></button>
+                  <button type="button" class="slider__toggle slider__toggle--fat"></button>
                 </div>
-                <span class="result__after-text">Стало</span>
+                <button type="button" class="result__after-text">Стало</button>
               </div>
             </div>
           </div>
@@ -216,7 +216,6 @@
             <address class="location__adress">ул. Большая <br> Конюшенная, д. 19/8 <br> <span class="location__city"> Санкт-Петербург</span></address>
           </div>
           <div class="location__map-wrapper">
-            <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.214070321069!2d30.32135800976628!3d59.93866259150999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606330312828!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </section>
@@ -255,7 +254,7 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <a href="https://echo.htmlacademy.ru" class="copyright__link" aria-label="HTML Academy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="HTML Academy">
             <span class="copyright__text">HTML Academy</span>
             <svg width="27" height="34">
               <use xlink:href="#academy"></use>

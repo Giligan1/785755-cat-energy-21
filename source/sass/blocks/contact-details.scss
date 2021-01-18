@@ -14,7 +14,6 @@
   margin-bottom: 36px;
   display: block;
   width: calc(100% + 20px);
-  position: relative;
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
@@ -36,7 +35,7 @@
     width: calc(100% + 220px);
     padding-left: 110px;
     margin-left: -110px;
-    padding-top: 67px;
+    padding-top: 69px;
   }
 }
 
@@ -44,22 +43,21 @@
   &::before {
     position: absolute;
     content: "";
-    top: 42px;
+    top: 461px;
     right: 0;
-    width: 33%;
+    width: 31%;
     height: 2px;
     background-color: $basic-green;
 
     @media (min-width: $tablet) {
-      top: 97px;
+      top: 685px;
       right: 0;
       width: 19%;
     }
 
     @media (min-width: $desktop) {
-      top: 89px;
-      right: 0;
-      width: 54%;
+      top: 412px;
+      width: calc(50% + 60px);
     }
   }
 
@@ -67,7 +65,7 @@
     @media (min-width: $tablet) {
       position: absolute;
       content: "";
-      top: 97px;
+      top: 685px;
       left: 0;
       width: 4%;
       height: 2px;
@@ -75,7 +73,7 @@
 
       @media (min-width: $desktop) {
         width: 4.5%;
-        top: 89px;
+        top: 412px;
       }
     }
   }
@@ -89,6 +87,7 @@
 
   @media (min-width: $desktop) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -97,6 +96,10 @@
   display: flex;
   position: relative;
   margin-bottom: 12px;
+
+  &:hover .contact-details__input {
+    border: 1px solid $border-calculate;
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 20px;
@@ -154,10 +157,6 @@
   padding: 10px 0;
   margin-bottom: 8px;
 
-  &:hover .contact-details__input {
-    border: 1px solid $border-calculate;
-  }
-
   &:focus .contact-details__input {
     border: 2px solid $special-dark-grey;
   }
@@ -181,7 +180,13 @@
 }
 
 .contact-details__input {
-  padding: 11px 0 11px 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-dark-grey;
+  text-transform: uppercase;
+  padding: 11px 45px 11px 15px;
   margin-left: 10px;
   width: 100%;
   border: 1px solid $border-input;
@@ -201,23 +206,65 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 13px 0 6px 17px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 13px 50px 6px 17px;
     margin-left: 21px;
   }
 
-  &:focus + .contact-details__letter {
-    stroke: $basic-green;
+  &--disabled {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special-dark-grey;
+    text-transform: uppercase;
+    padding: 11px 0 11px 15px;
+    margin-left: 10px;
+    width: 100%;
+    border: 2px solid $special-dark-grey;
+
+    & + .contact-details__letter {
+      stroke: $basic-green;
+    }
+
+    & + .contact-details__phone {
+      fill: $basic-green;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 13px 0 6px 17px;
+      margin-left: 21px;
+    }
   }
 
-  &:invalid + .contact-details__letter {
-    stroke: $error-input;
-  }
+  &--invalid {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special-dark-grey;
+    text-transform: uppercase;
+    padding: 11px 0 11px 15px;
+    margin-left: 10px;
+    width: 100%;
+    border: 2px solid $error-input;
 
-  &:focus + .contact-details__phone {
-    fill: $basic-green;
-  }
+    & + .contact-details__letter {
+      stroke: $error-input;
+    }
 
-  &:invalid + .contact-details__phone {
-    fill: $error-input;
+    & + .contact-details__phone {
+      fill: $error-input;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 13px 0 6px 17px;
+      margin-left: 21px;
+    }
   }
 }

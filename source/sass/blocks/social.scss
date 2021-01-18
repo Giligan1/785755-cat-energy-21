@@ -14,6 +14,7 @@
   margin: 0 auto;
   padding: 23px 0 15px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 130px;
 
@@ -43,7 +44,7 @@
   }
 
   &:active svg {
-    fill: transparentize($basic-green, 0.3);
+    fill: transparentize($basic-green, 0.7);
   }
 
   @media (min-width: $tablet) {
@@ -64,7 +65,7 @@
   }
 
   &:active svg {
-    fill: transparentize($basic-green, 0.3);
+    fill: transparentize($basic-green, 0.7);
   }
 
   @media (min-width: $tablet) {
@@ -86,7 +87,7 @@
   }
 
   &:active svg {
-    stroke: transparentize($basic-green, 0.3);
+    stroke: transparentize($basic-green, 0.7);
   }
 
   @media (min-width: $tablet) {

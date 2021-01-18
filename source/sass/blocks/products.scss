@@ -11,6 +11,9 @@
 
   @media (min-width: $desktop) {
     @include wrapper(110px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -325,5 +328,11 @@
     br {
       display: none;
     }
+  }
+}
+
+.products__space {
+  @media (max-width: $mobile) {
+    display: none;
   }
 }

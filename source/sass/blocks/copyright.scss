@@ -6,7 +6,8 @@
 
   @media (min-width: $tablet) {
     width: 163px;
-    padding-top: 54px;
+    padding-top: 57px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop) {
@@ -22,11 +23,11 @@
   }
 
   &:active .copyright__text {
-    color: transparentize($special-dark-grey, 0.3);
+    color: transparentize($special-dark-grey, 0.7);
   }
 
   &:active svg {
-    fill: transparentize($basic-green, 0.3);
+    fill: transparentize($basic-green, 0.7);
   }
 }
 

@@ -16,7 +16,6 @@
 .main-nav__button {
   content: "";
   position: absolute;
-  display: none;
   width: 64px;
   height: 66px;
   top: 0;
@@ -26,34 +25,52 @@
   border: none;
 }
 
-.main-nav--closed .main-nav__button::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  top: 25px;
-  right: 20px;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+.main-nav--closed {
+
+  @media (max-width: 767px) {
+    & .main-nav__button::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 2px;
+      top: 25px;
+      right: 20px;
+      background-color: $black;
+      box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+    }
+
+    & .main-nav__list {
+      display: none;
+    }
+  }
 }
 
 .main-nav--opened .main-nav__button {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    right: 23px;
-    width: 25px;
-    height: 2px;
-    background-color: $black;
-  }
 
-  &::before {
-    transform: rotate(45deg);
-  }
+  @media (max-width: 767px) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 23px;
+      width: 25px;
+      height: 2px;
+      background-color: $black;
+    }
 
-  &::after {
-    transform: rotate(-45deg);
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    & .main-nav__list {
+      display: block;
+    }
   }
 }
 

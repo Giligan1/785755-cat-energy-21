@@ -59,7 +59,8 @@
             <img class="page-header__logo-image-text name-logo-image" src="img/logo-text.svg" alt="Кэт энерджи" width="101" height="18">
           </picture>
         </a>
-        <nav class="main-nav main-nav__wrapper"> <!-- добавление класса main-nav--closed к блоку nav скрывает меню, main-nav--opened меню открывает -->
+        <!-- добавление класса main-nav--closed к блоку nav скрывает меню, main-nav--opened меню открывает -->
+        <nav class="main-nav main-nav__wrapper">
           <button class="main-nav__button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -125,14 +126,14 @@
               <ul class="contact-details__list">
                 <li class="contact-details__item">
                   <label class="contact-details__label" for="tel">E-mail:*</label>
-                  <input class="contact-details__input" id="tel" type="email" name="email" placeholder="kuklachev@gmail.com"> <!-- Добавление модификатора --invalid к классу contact-details__input устанавливает стили состояния невалидности поля, а модификатора --disabled устанавливает стили состояния блокировки поля -->
+                  <input class="contact-details__input" id="tel" type="email" name="email" placeholder="kuklachev@gmail.com"> <!-- Добавление модификатора --invalid к классу contact-details__input устанавливает стили состояния невалидности поля -->
                   <svg class="contact-details__letter" width="20" height="15">
                     <use xlink:href="#email-icon"></use>
                   </svg>
                 </li>
                 <li class="contact-details__item">
                   <label class="contact-details__label" for="phone">Телефон:*</label>
-                  <input class="contact-details__input" id="phone" type="tel" name="telephone" placeholder="8 (960) 900-60-90"> <!-- Добавление модификатора --invalid к классу contact-details__input устанавливает стили состояния невалидности поля, а модификатора --disabled устанавливает стили состояния блокировки поля -->
+                  <input class="contact-details__input" id="phone" type="tel" name="telephone" placeholder="8 (960) 900-60-90"> <!-- Добавление модификатора --invalid к классу contact-details__input устанавливает стили состояния невалидности поля -->
                   <svg class="contact-details__phone" width="20" height="21">
                     <use xlink:href="#phone-icon"></use>
                   </svg>
